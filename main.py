@@ -62,7 +62,27 @@ while True:
             for acc in accounts:
                 print("\n --Account Info--")
                 acc.show()
-                
+
+    elif choice == '3':
+        name = input("Enter account holder name: ")
+        acc = find_account(accounts, name)
+
+        if acc is None:
+            print("Account not found")
+        else:
+            print("Balance:", acc.get_balance())
+
+    elif choice == '4':
+        name = input("Enter account holder name: ")
+        acc = find_account(accounts, name)
+
+        if acc is None:
+            print("Account not found")
+        else:
+            deposit_amount = float(input("Enter deposit amount: "))
+            acc.deposit(deposit_amount)
+            print("Final Balance:", acc.get_balance())
+
 
     elif choice == '8':
         print("System closed")
