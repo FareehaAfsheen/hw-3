@@ -55,7 +55,14 @@ while True:
         print(f"Account created successfully for {name}")
         print("Balance:", new_acc.get_balance())
 
-
+    elif choice == '2':
+        if len(accounts) == 0:
+            print("No accounts found")
+        else:
+            for acc in accounts:
+                print("\n --Account Info--")
+                acc.show()
+                
 
     elif choice == '8':
         print("System closed")
