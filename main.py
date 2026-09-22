@@ -82,6 +82,16 @@ while True:
             deposit_amount = float(input("Enter deposit amount: "))
             acc.deposit(deposit_amount)
             print("Final Balance:", acc.get_balance())
+    elif choice == '5':
+        name = input("Enter account holder name: ")
+        acc = find_account(accounts, name)
+
+        if acc is None:
+            print("Account not found")
+        else:
+            withdraw_amount = float(input("Enter Withdraw Amount: "))
+            acc.withdraw(withdraw_amount)
+            print("Final Balance:", acc.get_balance())   
 
 
     elif choice == '8':
